@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+
+    <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <!-- Magnific Popup core JS file -->
+    <script src="magnific-popup/jquery.magnific-popup.js"></script>
+    <link href="Content/Site.css" rel="stylesheet" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+    <style>
+        .image-source-link {
+            color: #98C3D1;
+        }
+
+        .mfp-with-zoom .mfp-container,
+        .mfp-with-zoom.mfp-bg {
+            opacity: 0;
+            -webkit-backface-visibility: hidden;
+            /* ideally, transition speed should match zoom duration */
+            -webkit-transition: all 0.3s ease-out;
+            -moz-transition: all 0.3s ease-out;
+            -o-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+        }
+
+        .mfp-with-zoom.mfp-ready .mfp-container {
+            opacity: 1;
+        }
+
+        .mfp-with-zoom.mfp-ready.mfp-bg {
+            opacity: 0.8;
+        }
+
+        .mfp-with-zoom.mfp-removing .mfp-container,
+        .mfp-with-zoom.mfp-removing.mfp-bg {
+            opacity: 0;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('.image-link').magnificPopup({ type: 'image' });
+            $('.test-popup-link').magnificPopup({
+                type: 'image'
+                // other options
+            });
+            $('.parent-container').magnificPopup({
+                delegate: 'a', // child items selector, by clicking on it popup will open
+                type: 'image'
+                // other options
+            });
+            $('.zoom-gallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                closeOnContentClick: false,
+                closeBtnInside: false,
+                mainClass: 'mfp-with-zoom mfp-img-mobile',
+                image: {
+                    verticalFit: true,
+                    titleSrc: function (item) {
+                        return item.el.attr('title');
+                    }
+                },
+                gallery: {
+                    enabled: true
+                },
+                zoom: {
+                    enabled: true,
+                    duration: 300, // don't foget to change the duration also in CSS
+                    opener: function (element) {
+                        return element.find('img');
+                    }
+                }
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="col-md-12">
+        <div class="zoom-gallery">
+            Product - ICR || OrderID - EXP411179_TEST
+            <br />
+            <ul>
+                <li>
+                    Order Line Item Level -
+                    <ul>
+                        <li>
+                            AS IS SCREENS -
+                            <ul>
+                                <li>
+                                    <a href="Images/ICR AC AS IS.PNG" title="ICR - Access Circuit (Before Update at Task Level)">
+                                        <img src="Images/ICR AC AS IS.PNG" width="50" height="50" style="display:none" />
+                                        Access Circuit (Before Update at Task Level)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Images/ICR AC AFTER UPDATE.PNG" title="ICR - Access Circuit (After Update at Task Level)">
+                                        <img src="Images/ICR AC AFTER UPDATE.PNG" width="50" height="50" style="display:none" />
+                                        Access Circuit (After Update at Task Level)
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            TO BE SCREENS -
+                            <ul>
+                                <li>
+                                    <a href="Images/ICR CL1 TO BE.png" title="ICR - BT Standard Costline - Access Circuit Cost - TO BE SCREEN">
+                                        <img src="Images/ICR CL1 TO BE.png" width="50" height="50" style="display:none" />
+                                        BT Standard Costline - Access Circuit cost
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Images/ICR CL2 TO BE.png" title="ICR - BT Standard Costline - Access Circuit Cost - TO BE SCREEN">
+                                        <img src="Images/ICR CL2 TO BE.png" width="50" height="50" style="display:none" />
+                                        BT Standard Costline - Access Circuit cost
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Images/ICR CL3 TO BE.png" title="ICR - BT Standard Costline - Confirmed Access Circuit Cost - TO BE SCREEN">
+                                        <img src="Images/ICR CL3 TO BE.png" width="50" height="50" style="display:none" />
+                                        BT Standard Costline - Confirmed Access Circuit Cost
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Images/ICR CL4 TO BE.png" title="ICR - BT Standard Costline - Confirmed Access Circuit Cost - TO BE SCREEN">
+                                        <img src="Images/ICR CL4 TO BE.png" width="50" height="50" style="display:none" />
+                                        BT Standard Costline - Confirmed Access Circuit Cost
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Task Level
+                    <ul>
+                        <li>
+                            <a href="Images/TASK ICR.PNG" title="Task - Confirm Access Installed (ICr)">
+                                <img src="Images/TASK ICR.PNG" width="50" height="50" style="display:none" />
+                                Task - Confirm Access Installed (ICr)
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <br />
+            <br />
+            Product - ICG || OrderID - EXP410087_TEST
+            <br />
+            <ul>
+                <li>
+                    Order Line Item Level -
+                    <ul>
+                        <li>
+                            AS IS SCREENS -
+                            <ul>
+                                <li>
+                                    <a href="Images/ICG AC AS IS.PNG" title="ICG - Access Circuit (Before Update at Task Level)">
+                                        <img src="Images/ICG AC AS IS.PNG" width="50" height="50" style="display:none" />
+                                        Access Circuit (Before Update at Task Level)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Images/ICG AC AFTER UPDATE.PNG" title="ICG - Access Circuit (After Update at Task Level)">
+                                        <img src="Images/ICG AC AFTER UPDATE.PNG" width="50" height="50" style="display:none" />
+                                        Access Circuit (After Update at Task Level)
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            TO BE SCREENS -
+                            <ul>
+                                <li>
+                                    <a href="Images/ICG CL1 TO BE.png" title="ICG - BT Standard Costline - Access Circuit Cost - TO BE SCREEN">
+                                        <img src="Images/ICG CL1 TO BE.png" width="50" height="50" style="display:none" />
+                                        BT Standard Costline - Access Circuit cost
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Images/ICG CL2 TO BE.png" title="ICG - BT Standard Costline - Access Circuit Cost - TO BE SCREEN">
+                                        <img src="Images/ICG CL2 TO BE.png" width="50" height="50" style="display:none" />
+                                        BT Standard Costline - Access Circuit cost
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Images/ICG CL3 TO BE.png" title="ICG - BT Standard Costline - Confirmed Access Circuit Cost - TO BE SCREEN">
+                                        <img src="Images/ICG CL3 TO BE.png" width="50" height="50" style="display:none" />
+                                        BT Standard Costline - Confirmed Access Circuit Cost
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Images/ICG CL4 TO BE.png" title="ICG - BT Standard Costline - Confirmed Access Circuit Cost - TO BE SCREEN">
+                                        <img src="Images/ICG CL4 TO BE.png" width="50" height="50" style="display:none" />
+                                        BT Standard Costline - Confirmed Access Circuit Cost
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Task Level
+                    <ul>
+                        <li>
+                            <a href="Images/TASK ICG.PNG" title="Task - Confirm Access Installed (ICG)">
+                                <img src="Images/TASK ICG.PNG" width="50" height="50" style="display:none" />
+                                Task - Confirm Access Installed (ICG)
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+        <hr style="border: 8px; border-top: 1px solid #020202;" />
+        <b>
+            Requirement -
+        </b> To display SET 1 and SET 2 attributes in certain line items at order and task level.
+        <br />
+        <br />
+
+        <b>As per BAU in SI+ -</b> Updatable task level attributes get displayed at order level after getting updated by the user on UI.
+        <br />
+
+        <b>Constraint -</b> Since only updatable task level attributes can be made to display at order level and also this display can only happen within the same and common line items between task and order.
+        <br />
+        <br />
+        <b>E.g. -</b> Access Circuit is a common line between order and task. So SET2 attributes are getting shown in order level under Access Circuit line item instead of "BT Standard Costline".
+    </div>
+</body>
+</html>

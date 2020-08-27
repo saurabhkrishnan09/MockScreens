@@ -1,0 +1,13 @@
+{
+  "dependencies": {},
+  "parameters": {
+    "resourceGroup": {
+      "Type": "resourceGroup",
+      "Value": "WebApplication120200726163053ResourceGroup"
+    },
+    "subscriptionId": {
+      "Type": "subscription",
+      "Value": "707fad95-b94d-48b7-8199-9f29da269868"
+    }
+  }
+}
